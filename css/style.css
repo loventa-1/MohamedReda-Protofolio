@@ -89,6 +89,9 @@ img { display: block; max-width: 100%; }
 .nav-menu a:hover, .nav-menu a.active { color: var(--text); }
 .nav-menu a.active::after { transform: scaleX(1); }
 .navbar__actions { display: flex; align-items: center; gap: 10px; }
+.navbar__cv { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 14px; border: 1px solid var(--highlight); border-radius: 12px; background: var(--highlight); color: #172436; font-size: .78rem; font-weight: 800; white-space: nowrap; transition: transform var(--transition), box-shadow var(--transition); }
+.navbar__cv:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(5,10,20,.18); }
+.navbar__cv:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
 .theme-toggle, .menu-toggle { border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; }
 .theme-toggle { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; }
 .theme-toggle__icon { width: 17px; height: 17px; border: 2px solid var(--highlight); border-radius: 50%; box-shadow: 7px -3px 0 -3px var(--surface), 9px -5px 0 -4px var(--highlight); transition: transform .4s; }
@@ -298,6 +301,8 @@ img { display: block; max-width: 100%; }
   .testimonial-card { padding-inline: 44px; }
 }
 @media (max-width: 430px) {
+  .navbar__actions { gap: 7px; }
+  .navbar__cv { min-height: 40px; padding-inline: 10px; font-size: .72rem; }
   .hero__title { font-size: 3.05rem; }
   .hero__visual { min-height: 360px; }
   .profile-ring { width: 280px; }
